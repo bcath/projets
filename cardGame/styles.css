@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#gameHeader{
+    width: 90%;
+    height: 200px;
+    margin: 20px;
+    border-bottom: solid 5px #9fcb80 ;
+    /* background-color: #9fcb8080; */
+}
+
+#logo-container{
+    width: 100%;
+    height: 150px;
+    background-color: #9fcb8080;
+    border-radius: 5px;
+
+}
+
+
+#gameTitle{
+    
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    color: #9fcb80; 
+}
+
+
+
+/*Game style*/
+
+#sectionGame{
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
+    grid-gap: 2rem;
+    perspective: 800px;
+
+}
+
+
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+    transform: rotateY(0deg);
+    border-radius: 5px;
+    
+}
+
+.face, .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 5px;
+    
+}
+
+.back{
+    /* background-color: white; */
+    background-image: url(./images/cardCover.png); 
+    backface-visibility: hidden;
+    
+    
+    
+}
+
+.toggleCard{
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+/*svg logo title*/
+#logoTitle{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: filling 1.5s ease forwards 4.1s;
+    
+}
+
+#logoTitle path:nth-child(1){
+    stroke-dasharray: 87px;
+    stroke-dashoffset: 87px;
+    animation: line-anim 2s ease forwards;
+}
+#logoTitle path:nth-child(2){
+    stroke-dasharray: 143px;
+    stroke-dashoffset: 143px;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+#logoTitle path:nth-child(3){
+    stroke-dasharray: 117px;
+    stroke-dashoffset: 117px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+#logoTitle path:nth-child(4){
+    stroke-dasharray: 155px;
+    stroke-dashoffset: 155px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+#logoTitle path:nth-child(5){
+    stroke-dasharray: 143px;
+    stroke-dashoffset: 143px;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+#logoTitle path:nth-child(6){
+    stroke-dasharray: 186px;
+    stroke-dashoffset: 186px;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+#logoTitle path:nth-child(7){
+    stroke-dasharray: 168px;
+    stroke-dashoffset: 168px;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+#logoTitle path:nth-child(8){
+    stroke-dasharray: 186px;
+    stroke-dashoffset: 186px;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+#logoTitle path:nth-child(9){
+    stroke-dasharray: 120px;
+    stroke-dashoffset: 120px;
+    animation: line-anim 2s ease forwards 2.4s;
+}
+#logoTitle path:nth-child(10){
+    stroke-dasharray: 66px;
+    stroke-dashoffset: 66px;
+    animation: line-anim 2s ease forwards 2.7s;
+}
+#logoTitle path:nth-child(11){
+    stroke-dasharray: 69px;
+    stroke-dashoffset: 69px;
+    animation: line-anim 2s ease forwards 3.0s;
+}
+#logoTitle path:nth-child(12){
+    stroke-dasharray: 143px;
+    stroke-dashoffset: 143px;
+    animation: line-anim 2s ease forwards 3.3s;
+}
+
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+    
+}
+
+@keyframes filling {
+    from{
+        fill: transparent;
+    }
+    to{
+       fill : white;
+    }
+    
+}
+
+
+
+
+
+/*Speech bubble*/
+
+#core{
+    position: relative;
+}
+.box1 {
+    width: 300px;
+    margin: 50px auto;
+    background: white;
+    border: 1px solid #9fcb80;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #9fcb80;
+    font-family: arial;
+    position:absolute;
+    top: 50px;
+    right: -325px;
+  }
+
+  .sb7:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #9fcb80;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #9fcb80;
+    border-bottom: 10px solid transparent;
+    left: 20px;
+    bottom: -20px;
+  }
+ 
+  .sb7:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    left: 22px;
+    bottom: -15px;
+  } 
+  
+
+
+/*Restart Button*/
+#buttonPos{
+    position: absolute;
+    bottom: 10%;
+    left: 38%;
+}
+
+
+  /*Media queries - logoTitle*/
+
+@media screen and (min-height: 200px) and (max-height: 300px) {
+    #logoTitle{  
+        top: 35%;
+        left: 50%;   
+    }
+  }
+
+  @media screen and (min-height: 301px) and (max-height: 500px) {
+    #logoTitle{  
+        top: 23%;
+        left: 50%;   
+    }
+  }
+  
+@media screen and (min-height: 830px) and (max-height: 1000px) {
+    #logoTitle{  
+        top: 12%;
+        left: 50%;   
+    }
+  }
+  
+@media screen and (min-height: 1001px) and (max-height: 1300px) {
+    #logoTitle{  
+        top: 8%;
+        left: 50%;   
+    }
+  }
+
+@media screen and (min-height: 1301px) and (max-height: 1600px) {
+    #logoTitle{  
+        top: 6%;
+        left: 50%;   
+    }
+  }
+
+@media screen and (min-height: 1601px) and (max-height: 1920px) {
+    #logoTitle{  
+        top: 6%;
+        left: 50%;   
+    }
+  }
+
+
+/*Media queries - Score*/
+@media screen and (max-width: 1270px) {
+    #gameTitle{
+        font-size: 35px;
+        padding-bottom: 100px;
+    }
+    .box1 {
+        width: 200px;
+        margin: 25px auto;
+        padding: 20px;
+        top: 50px;
+        right: 200px;
+      }
+
+}
+
+@media screen and (max-width: 560px) and (min-width: 360px){
+    .box1 {
+        top: 50px;
+        right: 90px;
+      }
+
+}
+
+
+/*Media queries - Cards Size and disposition*/
+@media screen and (max-width: 640px) {
+    #sectionGame{
+        padding-top: 50px;
+        grid-template-columns: repeat(4, 8rem);
+        grid-template-rows: repeat(4, 8rem);
+        grid-gap: 1rem;
+    }
+    .card{
+        width: 60%;
+        height: 60%;
+    }
+
+    
+}
+
+@media screen and (max-width: 560px) and (min-width: 360px){
+    #sectionGame{
+        padding-top: 50px;
+        grid-template-columns: repeat(4, 6rem);
+        grid-template-rows: repeat(4, 6rem);
+        grid-gap: 0px;
+    }
+    .card{
+        width: 60%;
+        height: 60%;
+    }
+}
+
+/*Media queries - Restart button*/
+@media screen and (max-width: 640px) {
+   #buttonPos{
+    position: absolute;
+    bottom: 10%;
+    left: 33%;
+}
+
+}
+
+@media screen and (max-width: 560px) {
+    #buttonPos{
+     position: absolute;
+     bottom: 10%;
+     left: 28%;
+ }
+ 
+ }
+
+
