@@ -1,0 +1,294 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;    
+}
+
+header{
+    width: 100%;
+    height: 100%;  
+}
+
+/* Nav */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:  #85c1e9 ;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+}
+
+.logo{
+    color: rgb(248, 247, 247);
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+.nav-links{
+    display: flex;
+    width: 40%;
+   justify-content: space-around;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color:rgb(248, 247, 247);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(248, 247, 247);
+    margin:4px;
+}
+
+/* Sidebar */
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 13vh;
+        background-color:  #85c1e9 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+    z-index: 4;
+}
+
+@keyframes navLinkfade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+
+/* Main-image */
+.main-intro{
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    overflow: hidden;
+    background: #C04848;  /* fallback for old browsers */
+    background: linear-gradient(#08467061 , #1588d557), url("images-travel/plane-mainImage.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(#08467061, #1588d557), url("images-travel/plane-mainImage.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper{
+    width: auto;
+    margin:0 auto;
+    padding: 0;
+    
+    position: relative;
+    
+}
+
+.button-main{
+    display: block;
+    width: 200px;
+    height: 50px;
+    background:white;
+    color: #85c1e9;
+    font-size: 20px;
+    margin: 10px 10px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 300%);
+    -ms-transform: translate(-50%, 300%);
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    
+
+}
+
+.button-main:hover{
+    background:white;
+    color: #85c1e9;
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 15px;
+    
+}
+
+
+
+.plan{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-top: 1px solid #85c1e9;
+    border-bottom: 1px solid #85c1e9;
+    
+    
+}
+
+.plan h2{
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    
+
+}
+
+.plan p{
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.reservation{
+    width: 100%;
+    height:200px;
+    text-align: center;
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-bottom: 1px solid #85c1e9;
+    
+    
+}
+
+.reservation h2{
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
+
+.reservation p{
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.envol{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-bottom: 1px solid #85c1e9;
+    
+    
+}
+
+.envol h2{
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
+
+.envol p{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+
+
+/* Moving effect  */
+.reveal{
+    position: relative;
+    transform: translateX(150%);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+.reveal.active{
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+
+
+footer{
+    height: 400px;
+    background-color: #08467061;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-bottom{
+    display: flex;
+    width: 100%;
+   justify-content: space-around;
+   
+}
+
+.nav-bottom ul{
+    font-weight: bold;
+}
+
+.nav-bottom ul h3{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.nav-bottom ul li{
+    list-style: none
+}
+
+.nav-bottom ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bottom ul li a:hover{
+    text-decoration: underline;
+   
+}
