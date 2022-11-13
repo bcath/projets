@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+body {font-family : Arial, Helvetica, sans-serif; color:#006;}
+h2{background-color :#0f0;}
+.arrplan_jaune {background-color :#FF0;}
+.centrer {text-align:center;}
+#unique {color: white; background-color: #069;} 
+div a {background-color :green; color:#FFF;} 
+#unique p:last-child {color:#f06;font-size:xx-large;}
+a:hover{font-size:30px; color:#0F0;} 

@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/*Début des styles TP2*/
+h3{color : #FF3366;}
+figcaption{font-size: x-small;}
+footer{background-color: #FF9966; text-align: center; border: solid 3px #ffffff;}
+
+.listniv1{list-style-type: none; font-size: medium;}
+.listniv2-1{list-style-type: upper-alpha; color:#FF3366;}
+.listniv2-2{list-style-type: lower-roman; color: #FF9933;}
+.spantitreh4{font-weight: bold; color: #FF3366;}
+
+#footer_milieu{font-family: cursive; color: white;}
+
+
+
+/*Styles généraux numero 6 Tp2 étape2 : partie 4*/
+.mdl-layout__header{background-color: #FF9966; border-bottom: solid 5px #ffffff;}
+.mdl-layout__header-row .mdl-layout-title { color: #ffffff; font-size:3.0em; font-family: Times; font-style: italic;} 
+.mdl-navigation .mdl-navigation__link {color: #ffffff; font-size:
+1.3em; font-family: Times; font-weight: bold;} 
+
+h2{text-align: center; font-family: Arial; color: #ffffff; border: double 10px #ffffff; margin: 30px; padding: 20px; background-color: #FF9966;}
+h4{color: #FF3366;}
+/*Fin des styles TP2*/
+
+
+/*Style Tp3*/
+.iframe{width: 95%; margin: auto; height: 350px;}
+.videoperso{width: 95%;}
+.divvideo{text-align: center;}
+
+
+/*Tableau*/
+.matable{width: 70%; margin: auto; border: solid 5px #FF3366; border-collapse: collapse;}
+
+.matable th{text-align: left; vertical-align: bottom; border: solid 2px #FF3366; padding: 2px ;height: 75px; color: #ffffff; font-size: large; background-color: #FF9966}
+
+.matable td{text-align: left; border: solid 2px #FF3366; padding: 2px; height: 65px; color: #FF9933; font-size: medium;}
+
+.matable tbody tr:nth-child(even){background-color: gainsboro;}
+
+.matable tr:hover td{color: red;}
+
+/*images*/
+figure img{border: double 3px #FF9966; padding: 10px;}
+
+/*Liens*/
+a{text-decoration: none;}
+.listeul{list-style-type: square; color: #ff5800; font-size: medium;}
+.listeul a{color: #FF9933; font-size: medium;}
+
+/*Adresses*/
+address a:link, address a:visited, address a:active{color: #FF3366; font-size: medium;}
+address a:hover{color: darkcyan;}
+
+/*Catégories*/
+#Action>article, #Romance>article{border: double 5px #FF3366; text-align: center; margin: 10px;}
+#Action>article:hover, #Romance>article:hover{box-shadow: 3px 3px 3px 3px; color: #FF9966;}
+
+/*Liens vers catégories*/
+#liens_genre{text-align: center; margin-top: 15px; margin-bottom: 15px; font-size: medium;}
+#liens_genre>a{color: #FF9966; margin-left: 5px; margin-right: 5px; font-weight: bold; text-decoration: underline;}
+
+/*Fin des styles Tp3 */
+
+
+
+/*Styles tp4*/
+
+/*Styles Formulaire et carte*/
+
+#formulaire{border: double 3px #FF3366; max-width: 99%;}
+#formulaire fieldset{width: 100%; border: solid 2px #FF9966; border-radius: 10px;}
+#formulaire legend{color: #FF9966; font-weight: bold;}
+#formulaire #soumettre{background-color: #FF3366; color: #ffffff;}
+.bouton{text-align: center;}
+#formulaire label { display : block;}
+
+
+.carte{width: 90%; margin: auto; height: 350px; border: solid 5px gainsboro; border-radius: 10px;}
+
+
+#codeP, #nomPren, #courriel, #prov, #daterdv{background-color: gainsboro;}
+
+/*Styles menu de navigation*/
+
+.mdl-layout__header .mdl-layout__drawer-button { color: white; }
+
+
+/*Styles adaptive*/
+
+img{max-width :100%;}
+#tableau{overflow-x:auto;} 
+
+/*Requête media pour grand écran*/
+@media screen and (min-width : 640px) {
+    footer {display: flex; flex-direction : row;}
+    footer >div:first-child, footer >div:last-child{width: 20%;}
+    #footer_milieu{width: 60%;} 
+    
+    #Action, #Romance{display: flex; flex-direction : row; justify-content: space-around;}
+    #Action>article, #Romance>article{width: 35%;}
+    
+    .flex_principal{display: flex; flex-direction : row;}
+    .flex_principal>section, .flex_principal>aside{width: 50%; padding: 15px;}
+    .flex_principal>section{border-right: solid 1px #FF9966; padding-left: 1px; padding-right: 1px;}
+}
+
+
+/*Requête media pour petit écran*/
+@media screen and (max-width : 640px) {
+    footer {display: flex; flex-direction : column;}
+    footer >div:first-child, footer >div:last-child{display: none;}
+    #footer_milieu{width: 100%;}
+    
+    #Action, #Romance{display: flex; flex-direction : column;}
+    
+    .flex_principal{display: flex; flex-direction : column;}
+    .flex_principal>section, .flex_principal>aside{width: 100%;}
+
+}
+
+/*Fin styles tp4*/
+
+
